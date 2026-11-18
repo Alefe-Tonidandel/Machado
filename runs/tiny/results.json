@@ -1,0 +1,38 @@
+{
+  "config": {
+    "vocab_size": 104,
+    "block_size": 64,
+    "n_layer": 2,
+    "n_head": 2,
+    "n_embd": 64,
+    "dropout": 0.1
+  },
+  "n_params": 110848,
+  "best_step": 1500,
+  "best_val_loss": 2.308361973762512,
+  "val_bpc": 3.33670871718262,
+  "test_bpc": 3.368278681306612,
+  "test_book": "papeis_avulsos",
+  "train_seconds": 231.9,
+  "args": {
+    "data_dir": "data/raw",
+    "test_book": "papeis_avulsos",
+    "out": "runs/tiny",
+    "n_layer": 2,
+    "n_head": 2,
+    "n_embd": 64,
+    "block_size": 64,
+    "dropout": 0.1,
+    "batch_size": 64,
+    "max_steps": 1500,
+    "lr": 0.0003,
+    "weight_decay": 0.1,
+    "warmup_steps": 100,
+    "grad_clip": 1.0,
+    "eval_interval": 250,
+    "eval_iters": 50,
+    "seed": 1337,
+    "device": "auto"
+  },
+  "device": "cpu"
+}

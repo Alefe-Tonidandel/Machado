@@ -1,0 +1,22 @@
+[project]
+name = "machadinho"
+version = "0.1.0"
+description = "Mini-GPT em PyTorch, treinado do zero em português machadiano."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1"]
+
+[project.optional-dependencies]
+hub = ["huggingface_hub>=0.23"]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
