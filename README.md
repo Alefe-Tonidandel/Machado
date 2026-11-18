@@ -114,3 +114,12 @@ tests/           pytest
 ## Modelo publicado
 
 <!-- TODO: link do modelo no Hugging Face depois de rodar scripts/push_to_hub.py -->
+
+## Leitura dos resultados
+
+Com 1.500 passos em CPU (cerca de 32 minutos para o modelo `small`), o Transformer **não superou** o baseline
+de n-gramas de caracteres: 2,97 bpc contra 2,29 bpc no livro de teste (ordem 6). A perda de treino ficou próxima
+da de validação e ainda caía no fim, o que indica **subtreino**, e não sobreajuste. O texto gerado imita a
+estatística de caracteres da época, mas não forma frases coerentes.
+
+Próximo passo: treinar por mais passos, com taxa de aprendizado maior e em GPU, e comparar de novo.
